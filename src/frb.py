@@ -63,7 +63,7 @@ if __name__ == '__main__':
     raw_data = df.iloc[:,:(df.columns.size-1)].values
     data_target_names = df.iloc[:,-1].unique()
     print("number of class: %d"% (len(data_target_names)))
-
+    print("number of fuzzy reles: %d"% (len(data_target_names)*rulesperclass))
     target_mapping = dict()
     for i,j in enumerate(data_target_names):
         target_mapping[j] = i
