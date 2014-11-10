@@ -8,4 +8,5 @@ sample usage
 ===============
 python ./src/frb.py -f ./data/iris.data.csv -k 3
 
-note: the input file MUST have one column named 'CLASS' with data labels and features column names  
+note: the input file MUST have header row
+with one column named 'CLASS' for data labels and features name column  
