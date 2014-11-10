@@ -32,6 +32,7 @@ class FuzzyRuleBase:
         np.divide(mfv,self.s2,mfv)
         np.exp(mfv,mfv)
         #mfv = np.exp(np.divide(np.negative(np.square(np.subtract(datapoint,model.m))),np.square(model.s))
+        #inline version maybe slower
         return mfv               
     
     def getFS(self,datapoint):
@@ -48,37 +49,46 @@ class FuzzyRuleBase:
             for _j in xrange(j):
                 yield _i
 
-   
+
 
 if __name__ == '__main__':
+    ################################################################################
+    #setting argument
     parser = argparse.ArgumentParser(description='simple FRBS demo program for classification problem') 
     parser.add_argument('-f',required = True)
     parser.add_argument('-k',type=int,default = 2)
     args = parser.parse_args()
     infile_path = args.f
     rulesperclass = args.k
+    ################################################################################
+    #read input training file and show some information
     print("input file: %s"% (os.path.basename(infile_path)))
-    print("rule per class: %d"% (rulesperclass))
+    print("rules per class: %d"% (rulesperclass))
     df=pd.read_csv(infile_path, sep=',')
-    raw_data = df.iloc[:,:(df.columns.size-1)].values
-    data_target_names = df.iloc[:,-1].unique()
+    raw_data = df.drop("CLASS", axis=1).values
+    data_target_names = df.CLASS.unique()
     print("number of class: %d"% (len(data_target_names)))
-    print("number of fuzzy reles: %d"% (len(data_target_names)*rulesperclass))
+    print("number of fuzzy rules: %d"% (len(data_target_names)*rulesperclass))
+    print("number of instance: %d"% (len(df.index)))
+    print("-"*80)
+    ################################################################################
+    #maping category class label to numerical
     target_mapping = dict()
     for i,j in enumerate(data_target_names):
         target_mapping[j] = i
-    data_target = np.asarray(map(lambda x: target_mapping.get(x) if target_mapping.has_key(x) else -1,df.iloc[:,-1]))	
-    print("number of instance: %d"% (len(data_target)))
+    data_target = np.asarray(map(lambda x: target_mapping.get(x) if target_mapping.has_key(x) else -1,df.CLASS))	
+    ################################################################################
+    #Scaling inupt data set
     scaler = preprocessing.StandardScaler().fit(raw_data)
     data_scaled = scaler.transform(raw_data)
-
+    ################################################################################
+    #build fuzzy system and predict
     R1 = FuzzyRuleBase(data_scaled,data_target,len(data_target_names),rulesperclass)
-        
-    print("-"*80)
-    
     myans = map(R1.predict,data_scaled)
-        
+    ################################################################################
+    #output confusion matrix and accuracy
     cm = confusion_matrix(data_target, myans)
+    print("Confusion Matrix")
     print(cm)
     print("-"*80)
     print("Accuracy:%2.2f" % (np.trace(cm)/(cm.sum()+0.0)))
