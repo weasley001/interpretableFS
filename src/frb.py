@@ -2,7 +2,7 @@ from sklearn import datasets, cluster, preprocessing
 from sklearn.metrics import confusion_matrix
 import numpy as np
 import pandas as pd
-import argparse, os
+import argparse, os, sys, traceback
 
 class FuzzyRuleBase:
 
@@ -14,8 +14,9 @@ class FuzzyRuleBase:
         self.X = (map(lambda i: data[target == i],xrange(self.nc)))
         self.rule_target = np.arange( self.nr ).reshape((self.nc,self.nrpc))
         Y = (map(self.getcluster, xrange(self.nc)))
+        print("Clusting")
         M = np.asarray(map(lambda i,j:self.X[i][Y[i]==j].mean(axis=0),FuzzyRuleBase.myrange(self.nc,self.nrpc ), range(self.nrpc )*self.nc))
-        S = np.asarray(map(lambda i,j:self.X[i][Y[i]==j].std(axis=0),FuzzyRuleBase.myrange(self.nc,self.nrpc ), range(self.nrpc )*self.nc))
+        S =0.0001+np.asarray(map(lambda i,j:self.X[i][Y[i]==j].std(axis=0),FuzzyRuleBase.myrange(self.nc,self.nrpc ), range(self.nrpc )*self.nc))
         self.m = M
         self.s = S
         self.s2 = np.square(S)
@@ -26,13 +27,16 @@ class FuzzyRuleBase:
         return k_means.labels_
     
     def gaussianMF(self,datapoint):
+        
         mfv = np.subtract(datapoint,self.m)
         np.square(mfv,mfv)
         np.negative(mfv,mfv)
         np.divide(mfv,self.s2,mfv)
         np.exp(mfv,mfv)
+        
         #mfv = np.exp(np.divide(np.negative(np.square(np.subtract(datapoint,model.m))),np.square(model.s))
         #inline version maybe slower
+        
         return mfv               
     
     def getFS(self,datapoint):
@@ -48,12 +52,19 @@ class FuzzyRuleBase:
         for _i in xrange(i):
             for _j in xrange(j):
                 yield _i
+    
+    
 
+def err_handler(type, flag):
+    print "Floating point error (%s), with flag %s" % (type, flag)
+    #traceback.print_stack()
 
 
 if __name__ == '__main__':
     ################################################################################
     #setting argument
+    saved_handler = np.seterrcall (err_handler)
+    old_settings = np.seterr(all='call',under="ignore")
     parser = argparse.ArgumentParser(description='simple FRBS demo program for classification problem') 
     parser.add_argument('-f',required = True)
     parser.add_argument('-k',type=int,default = 2)
@@ -80,11 +91,17 @@ if __name__ == '__main__':
     ################################################################################
     #Scaling inupt data set
     scaler = preprocessing.StandardScaler().fit(raw_data)
+    np.set_printoptions(precision=2,suppress=False,formatter={'float': '{: 0.3f}'.format})
+    #print(scaler.mean_)
+    #print(scaler.std_)
+    sys.stdout.flush()
     data_scaled = scaler.transform(raw_data)
+    #np.savetxt("scaled.csv", data_scaled , delimiter=",")
     ################################################################################
     #build fuzzy system and predict
     R1 = FuzzyRuleBase(data_scaled,data_target,len(data_target_names),rulesperclass)
     myans = map(R1.predict,data_scaled)
+   
     ################################################################################
     #output confusion matrix and accuracy
     cm = confusion_matrix(data_target, myans)

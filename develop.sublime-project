@@ -1,0 +1,23 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"python",
+				"$file",
+				"-f",
+				"C:/Users/weasley/Documents/GitHub/interpretableFS/data/higgs-boson-training.data.csv",
+				"-k",
+				"3"
+			],
+			"name": "Run with args"
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "src"
+		}
+	]
+}

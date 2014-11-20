@@ -1,0 +1,610 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"data",
+				"data_target"
+			],
+			[
+				"rule",
+				"rulesperclass"
+			],
+			[
+				"in",
+				"infile_path"
+			],
+			[
+				"a",
+				"args"
+			],
+			[
+				"t",
+				"target_mapping"
+			],
+			[
+				"tar",
+				"target_mapping"
+			],
+			[
+				"s",
+				"sum"
+			],
+			[
+				"n",
+				"np"
+			],
+			[
+				"r",
+				"R1"
+			],
+			[
+				"la",
+				"labels_"
+			],
+			[
+				"f",
+				"fit"
+			],
+			[
+				"ir",
+				"iris_scaled"
+			],
+			[
+				"x",
+				"xrange"
+			],
+			[
+				"R",
+				"R1"
+			],
+			[
+				"d",
+				"datapoint"
+			],
+			[
+				"g",
+				"gaussianMF"
+			],
+			[
+				"de",
+				"denominator"
+			],
+			[
+				"sa",
+				"shape"
+			],
+			[
+				"pr",
+				"productTNOME"
+			],
+			[
+				"m",
+				"m"
+			],
+			[
+				"M",
+				"m"
+			],
+			[
+				"mean",
+				"k_means"
+			],
+			[
+				"as",
+				"asarray"
+			],
+			[
+				"dta",
+				"datapoint"
+			],
+			[
+				"num",
+				"numofclass"
+			],
+			[
+				"nu",
+				"numofclass"
+			],
+			[
+				"re",
+				"range"
+			],
+			[
+				"iri",
+				"iris_scaled"
+			],
+			[
+				"res",
+				"results"
+			],
+			[
+				"resul",
+				"result"
+			],
+			[
+				"safe",
+				"safe_search"
+			],
+			[
+				"bo",
+				"body"
+			],
+			[
+				"doc",
+				"doc_type"
+			],
+			[
+				"else",
+				"else"
+			],
+			[
+				"qu",
+				"query"
+			],
+			[
+				"wor",
+				"workers"
+			],
+			[
+				"hits",
+				"hits"
+			],
+			[
+				"query",
+				"querybody"
+			],
+			[
+				"co",
+				"index_count"
+			],
+			[
+				"inde",
+				"index_count"
+			],
+			[
+				"fo",
+				"fout"
+			],
+			[
+				"p",
+				"pubchem"
+			],
+			[
+				"q",
+				"query_term"
+			],
+			[
+				"index",
+				"index_name"
+			],
+			[
+				"syns",
+				"syns"
+			],
+			[
+				"fi",
+				"filter"
+			],
+			[
+				"SYN",
+				"SYN"
+			],
+			[
+				"sid",
+				"sid"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/D/SDF/project/import data.py",
+			"settings":
+			{
+				"buffer_size": 1098,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/SDF/import_iupac_linux.py",
+			"settings":
+			{
+				"buffer_size": 7084,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/SDF/string_test_linux.py",
+			"settings":
+			{
+				"buffer_size": 6394,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/SDF/search_test_noagg_trace2.7.py",
+			"settings":
+			{
+				"buffer_size": 6224,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/SDF/search_test_trace2.7.py",
+			"settings":
+			{
+				"buffer_size": 6201,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/frb.py",
+			"settings":
+			{
+				"buffer_size": 3994,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "develop.sublime-project",
+			"settings":
+			{
+				"buffer_size": 275,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Run with args",
+	"command_palette":
+	{
+		"height": 104.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/weasley/Documents/GitHub/interpretableFS/develop.sublime-project",
+		"/C/Users/weasley/Documents/GitHub/interpretableFS/src/frb.py",
+		"/C/Users/weasley/Documents/GitHub/interpretableFS/frb.py",
+		"/C/Users/weasley/Documents/GitHub/interpretableFS/develpo.sublime-project",
+		"/D/tmp/futures_test.py",
+		"/D/TCM/check_TCM_utf8.py",
+		"/C/Users/weasley/AppData/Roaming/Sublime Text 2/Packages/User/myftb.sublime-build",
+		"/C/Users/weasley/AppData/Roaming/Sublime Text 2/Packages/User/py34.sublime-build",
+		"/C/Users/weasley/Anaconda/envs/py34/Scripts/pip-script.py",
+		"/C/Users/weasley/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/weasley/AppData/Local/Temp/Temp1_elasticsearch-py-master.zip/elasticsearch-py-master/test_elasticsearch/run_tests.py",
+		"/C/Users/weasley/AppData/Local/Temp/Temp1_microblog-0.10.zip/microblog-0.10/app/forms.py",
+		"/C/Users/weasley/AppData/Local/Temp/Temp1_microblog-0.10.zip/microblog-0.10/app/views.py",
+		"/C/Users/weasley/AppData/Local/Temp/Temp1_microblog-0.10.zip/microblog-0.10/config.py",
+		"/C/Users/weasley/AppData/Local/Temp/Temp1_microblog-0.10.zip/microblog-0.10/app/__init__.py",
+		"/C/Users/weasley/AppData/Local/Temp/7zOE63F.tmp/getCallTag.py",
+		"/C/Users/weasley/AppData/Local/Temp/7zO75C1.tmp/get_rtb4.1.py",
+		"/C/Users/weasley/Anaconda/lib/site-packages/elasticsearch/client/utils.py"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"path"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/D/SDF/project/import data.py",
+					"settings":
+					{
+						"buffer_size": 1098,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1098
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 398.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/D/SDF/import_iupac_linux.py",
+					"settings":
+					{
+						"buffer_size": 7084,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2226,
+								2232
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1260.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/D/SDF/string_test_linux.py",
+					"settings":
+					{
+						"buffer_size": 6394,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								26
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/D/SDF/search_test_noagg_trace2.7.py",
+					"settings":
+					{
+						"buffer_size": 6224,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2619,
+								2619
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1152.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/D/SDF/search_test_trace2.7.py",
+					"settings":
+					{
+						"buffer_size": 6201,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5054,
+								5028
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2580.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "src/frb.py",
+					"settings":
+					{
+						"buffer_size": 3994,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3374,
+								3374
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1083.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "develop.sublime-project",
+					"settings":
+					{
+						"buffer_size": 275,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								187,
+								187
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.397215413437,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 269.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
