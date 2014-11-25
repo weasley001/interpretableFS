@@ -15,16 +15,24 @@ class FuzzyRuleBase:
         self.rule_target = np.arange( self.nr ).reshape((self.nc,self.nrpc))
         Y = (map(self.getcluster, xrange(self.nc)))
         print("Clusting")
-        M = np.asarray(map(lambda i,j:self.X[i][Y[i]==j].mean(axis=0),FuzzyRuleBase.myrange(self.nc,self.nrpc ), range(self.nrpc )*self.nc))
-        S =0.0001+np.asarray(map(lambda i,j:self.X[i][Y[i]==j].std(axis=0),FuzzyRuleBase.myrange(self.nc,self.nrpc ), range(self.nrpc )*self.nc))
+        
+        M = np.asarray(map(lambda i,j:self.X[i][Y[i][:,j]>=0.5].mean(axis=0),FuzzyRuleBase.myrange(self.nc,self.nrpc ), range(self.nrpc )*self.nc))
+        S =0.0001+np.asarray(map(lambda i,j:self.X[i][Y[i][:,j]>=0.5].std(axis=0),FuzzyRuleBase.myrange(self.nc,self.nrpc ), range(self.nrpc )*self.nc))
         self.m = M
         self.s = S
         self.s2 = np.square(S)
 
     def getcluster(self,k):
-        k_means = cluster.KMeans(self.nrpc)
-        k_means.fit(self.X[k])
-        return k_means.labels_
+
+        if len(self.X[k]) < self.nrpc :
+            label = np.ones((len(self.X[k]), self.nrpc))
+            print("Warring:Rule number is larger than instance number in Class %d" %(k))
+        else:
+            k_means = cluster.KMeans(self.nrpc)
+            k_means.fit(self.X[k])
+            label = np.zeros((len(self.X[k]), self.nrpc))
+            map(lambda i,j: label.itemset((i,j),1),xrange(len(self.X[k])),k_means.labels_)
+        return label
     
     def gaussianMF(self,datapoint):
         
@@ -101,7 +109,8 @@ if __name__ == '__main__':
     #build fuzzy system and predict
     R1 = FuzzyRuleBase(data_scaled,data_target,len(data_target_names),rulesperclass)
     myans = map(R1.predict,data_scaled)
-   
+    print(R1.m)
+    
     ################################################################################
     #output confusion matrix and accuracy
     cm = confusion_matrix(data_target, myans)
